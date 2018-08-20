@@ -1,0 +1,8 @@
+page-content-tab {
+    .leftTab > super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button:nth-child(1){
+        display: none;
+    }
+    .leftTab > super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button:nth-child(4){
+        display: none;
+    }
+}

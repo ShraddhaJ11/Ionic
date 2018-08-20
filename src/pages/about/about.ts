@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ContentTabPage } from '../content-tab/content-tab';
 
 @Component({
-  selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
+  ContentPage:any = ContentTabPage;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor() {
+   
   }
-
 }

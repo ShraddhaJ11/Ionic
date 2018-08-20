@@ -1,3 +1,62 @@
 page-home {
-
+    .contentCard {
+        border-radius: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .contentHeader {
+        display: block;
+        white-space: normal;
+        padding: 0%;
+        text-align: justify;
+        font-size: 1.4rem;
+        color: #000;
+    }
+    .contentImage{
+        margin: 10px 0px;
+    }
+    .contentDescription{
+        padding: 0%;
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+    .contentButton { 
+        background:#999;
+        cursor: pointer;
+        height: 1.8em;
+        font-size: 1rem;
+        padding: 0.5em 0.5em;
+    }
+   
+    .optionRow {
+        padding-left: 40%;
+    }
+    .buttonOptions {
+        height: 1.4em;
+        padding: 0px;
+        font-size: 1.6em;
+        cursor: pointer;
+    }
+   
+    .dateContainer{
+        font-size: 1rem;
+        text-align: end;
+        padding: 4% 0 7% 0;
+    }
+    .logo {
+        height: 70px;
+    }
+    .navTitle > div{
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #464646;;
+    }
+    .rightNav {
+        float: right;
+        padding: 23px;
+        font-size: 2em;
+    }
+    .wrapper{
+        margin-top: 83px;
+    }
 }

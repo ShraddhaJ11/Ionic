@@ -1,5 +1,6 @@
-<ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
-</ion-tabs>
+<super-tabs class="tabBar" tabsPlacement="bottom" toolbarColor="light" toolbarBackground="dark" (tabSelect)="tabSelected($event)">
+  <super-tab [root]="tab1Root" icon="albums"></super-tab>
+  <super-tab [root]="tab2Root" icon="apps"></super-tab>
+  <super-tab [root]="tab3Root" icon="search"></super-tab>
+  <super-tab [root]="tab4Root" icon="person"></super-tab>
+</super-tabs>

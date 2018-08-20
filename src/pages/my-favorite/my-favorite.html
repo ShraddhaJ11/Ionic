@@ -1,0 +1,26 @@
+<ion-list class="wrapper">
+
+    <ion-item>
+      <ion-label fixed>Title</ion-label>
+      <ion-input #title type="text" value=""></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label fixed>Location</ion-label>
+      <ion-input #location type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Notes</ion-label>
+      <ion-input #notes type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Start Date</ion-label>
+      <ion-input #start type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>End Date</ion-label>
+      <ion-input #end type="text"></ion-input>
+    </ion-item>
+
+    <button ion-button color="dark" (click)="submitForm(title,location,notes,start,end)">Add Event</button>
+  </ion-list>

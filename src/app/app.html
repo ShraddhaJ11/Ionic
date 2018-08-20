@@ -1,1 +1,11 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-header class="appHeader">
+    <ion-navbar *ngIf="rootHeader" class="headerWrapper">
+          <img class="logo" src="../../assets/imgs/logo.jpg">
+          <ion-title class='navTitle'>Royal College of Psychiatrists</ion-title>
+          <ion-icon class="rightNav" color="dark" name="arrow-forward" (click)="goToAboutPage()"></ion-icon>
+    </ion-navbar>
+    <ion-navbar *ngIf="!rootHeader" class="headerWrapper">
+      <ion-icon class="rightNav" color="dark" name="arrow-back"  (click)="goBack()"></ion-icon>
+    </ion-navbar>
+</ion-header>
+<ion-nav #myNav [root]="rootPage"></ion-nav>

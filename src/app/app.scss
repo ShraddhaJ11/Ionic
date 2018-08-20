@@ -14,3 +14,31 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.logo {
+    height: 70px;
+}
+.navTitle > div{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #464646;;
+}
+.rightNav {
+    float: right;
+    padding: 23px;
+    font-size: 2em;
+}
+.tabBar > div {
+    background: black !important;
+}
+.headerWrapper > div {
+    height: 100%;
+    display: flex;
+}
+.appHeader{
+    height: 82px;
+}
+.headerWrapper{
+    padding: 1%;
+    // min-height: 56px;
+    height: 100%;
+}

@@ -1,17 +1,111 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-content padding >
+  <div *ngIf="!showForm"><ion-card class='contentCard' style='margin-top: 83px'>
+    <ion-row>
+      <ion-col>
+        <button class="contentButton" ion-button color="dark" start small>REVIEW ARTICLES</button>
+      </ion-col>
+      <ion-col>
+        <div class="dateContainer">Published on - 8 august 2018</div>
+      </ion-col>
+    </ion-row>
+    <ion-card-header class="contentHeader">
+      <div >Phychosocial concerns reported by syrians refugees living in Jordan : systematic reviews of unpublished needs assessments</div>
+    </ion-card-header>
+    <img class="contentImage" src="../../assets/imgs/RCP.jpg">
+
+    <ion-card-content  class='contentDescription'>
+      <p>The College has existed in various forms since 1841, having started life as the Association of Medical Officers of
+        Asylums and Hospitals for the Insane.</p>
+    </ion-card-content>
+
+    <ion-row class='optionRow'>
+      <ion-col>
+        <button class="buttonOptions" ion-button icon-start clear (click)="shareVia()">
+          <ion-icon color="dark" name="ios-undo-outline"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button class="buttonOptions" ion-button clear (click)="openEventForm()">
+          <ion-icon color="danger" name="heart-outline"></ion-icon>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button class="buttonOptions" ion-button icon-end clear (click)="download()">
+          <ion-icon color="dark" name="ios-download-outline"></ion-icon>
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-card>
+ 
+  <hr style="height:1px">
+  <ion-card class='contentCard'>
+      <ion-row>
+        <ion-col>
+          <button class="contentButton" ion-button color="dark" start small>REVIEW ARTICLES</button>
+        </ion-col>
+        <ion-col>
+          <div class="dateContainer">Posted on - 9 august 2018</div>
+        </ion-col>
+      </ion-row>
+      <ion-card-header class="contentHeader">
+        <div>The American College of Psychiatrists is an American association of psychiatrists based in Chicago, Illinois. It operates annual meetings, publishes a newsletter, presents awards and organizes the PRITE exam for psychiatric residents and the PIPE exam for practicing psychiatrists. Membership is decided by current members, with a limit of 750 psychiatrists out of the more than 46,000 psychiatrists in the United States. It was founded in 1963.</div>
+      </ion-card-header>
+      <img class="contentImage" src="../../assets/imgs/ACP.jpg">
+  
+      <ion-card-content class='contentDescription'>
+        <p>The American College of Psychiatrists comprises more than 750 psychiatrists who have demonstrated excellence in the field of psychiatry, and achieved national recognition in clinical practice, research, academic leadership, or teaching.</p>
+      </ion-card-content>
+  
+      <ion-row class='optionRow'>
+        <ion-col>
+          <button class="buttonOptions" ion-button icon-start clear (click)="shareVia()">
+            <ion-icon color="dark" name="ios-undo-outline"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button class="buttonOptions" ion-button clear (click)="openEventForm()">
+            <ion-icon color="danger" name="heart-outline"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button class="buttonOptions" ion-button icon-end clear (click)="download()">
+            <ion-icon color="dark" name="ios-download-outline"></ion-icon>
+          </button>
+        </ion-col>
+  
+      </ion-row>
+  
+    </ion-card>
+  <hr>
+</div>
+<ion-list class="wrapper" *ngIf="showForm">
+
+    <ion-item>
+      <ion-label fixed>Title</ion-label>
+      <ion-input #title type="text" value=""></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label fixed>Location</ion-label>
+      <ion-input #location type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Notes</ion-label>
+      <ion-input #notes type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <!-- <ion-label fixed>Start Date</ion-label> -->
+      <button ion-button color="light" (click)="selectStartDate()">Select Start Date</button><div *ngIf="startDate">{{startDate}}</div>
+    </ion-item>
+    <ion-item>
+      <!-- <ion-label fixed>End Date</ion-label> -->
+      <button ion-button color="light" (click)="selectEndDate()">Select End Date</button><div *ngIf="endDate">{{endDate}}</div>
+    </ion-item>
+
+    <button ion-button color="dark" (click)="submitForm(title,location,notes)">Add Event</button>
+  </ion-list>
 </ion-content>
